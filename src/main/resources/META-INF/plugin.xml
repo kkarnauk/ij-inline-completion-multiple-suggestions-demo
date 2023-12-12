@@ -28,5 +28,15 @@
         <inline.completion.provider
                 implementation="io.github.kkarnauk.inline.completion.demo.MultipleSuggestionInlineCompletionProvider"
                 order="first"/>
+
+        <actionPromoter implementation="io.github.kkarnauk.inline.completion.demo.SwitchInlineCompletionSuggestionActionsPromoter"/>
     </extensions>
+    <actions>
+        <action id="NextInlineCompletionSuggestionAction" class="io.github.kkarnauk.inline.completion.demo.NextInlineCompletionSuggestionAction">
+            <keyboard-shortcut first-keystroke="shift control CLOSE_BRACKET" keymap="$default"/>
+        </action>
+        <action id="PrevInlineCompletionSuggestionAction" class="io.github.kkarnauk.inline.completion.demo.PrevInlineCompletionSuggestionAction">
+            <keyboard-shortcut first-keystroke="control shift OPEN_BRACKET" keymap="$default"/>
+        </action>
+    </actions>
 </idea-plugin>
